@@ -1,0 +1,22 @@
+{
+  "name": "the-fifth-relic",
+  "version": "0.1.0",
+  "description": "A cinematic five-player cooperative survival adventure (browser + authoritative Node server).",
+  "main": "server/index.js",
+  "type": "module",
+  "scripts": {
+    "start": "node server/index.js",
+    "test": "node --test tests/acceptance.test.js tests/autoplay.test.js",
+    "test:e2e": "python3 tests/browser_e2e.py",
+    "autoplay": "node tests/autoplay.js adventurer restore 45"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "three": "^0.186.1",
+    "ws": "^8.22.0"
+  },
+  "private": true,
+  "engines": {
+    "node": ">=18"
+  }
+}
