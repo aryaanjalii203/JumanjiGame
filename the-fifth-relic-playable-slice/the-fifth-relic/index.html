@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#07110d" />
+  <title>THE FIFTH RELIC — Cooperative Survival</title>
+</head>
+<body>
+  <div id="game"></div>
+  <div id="vignette"></div>
+  <header id="topbar">
+    <div class="brand"><span class="sigil">✦</span><div><strong>THE FIFTH RELIC</strong><small>COOPERATIVE SURVIVAL PROTOCOL</small></div></div>
+    <div class="session"><span class="pulse"></span><span id="connection">LOCAL SESSION</span><label>ROOM <input id="room" value="WILDS5" maxlength="12"></label><button id="join">JOIN</button></div>
+  </header>
+  <section id="intro" class="panel">
+    <p class="eyebrow">EXPEDITION LOG 01 · SIGNAL LOST</p>
+    <h1>THE JUNGLE<br><em>IS WATCHING.</em></h1>
+    <p class="intro-copy">Five signals entered the canopy. None have returned. Find the relic console, restore its three glyphs, and survive what wakes beneath the ruins.</p>
+    <div class="intro-actions"><button id="start">ENTER THE WILDS</button><span>WASD / ARROWS · SPACE JUMP · E INTERACT</span></div>
+  </section>
+  <aside id="leftHud" class="hud">
+    <div class="section-label">EXPEDITION STATUS</div>
+    <div class="mission-title" id="missionTitle">01 / LOST IN THE WILDS</div>
+    <div id="objective">Reach the ruined console.</div>
+    <div class="progress"><div id="progressFill"></div></div>
+    <div class="glyphs"><span data-glyph="0">◇</span><span data-glyph="1">◇</span><span data-glyph="2">◇</span></div>
+    <div class="section-label life-label">LIFE MARKS</div>
+    <div id="lives" class="lives"><b>◆</b><b>◆</b><b>◆</b></div>
+    <div id="avatarName" class="avatar-name">TITAN <small>EXPEDITION LEADER</small></div>
+    <div id="avatarAbility">Q · BULWARK — absorb incoming damage briefly</div>
+  </aside>
+  <aside id="rightHud" class="hud">
+    <div class="section-label">TEAM SIGNALS <span id="teamCount">01 / 05</span></div>
+    <div id="teamList"></div>
+    <div class="section-label threat-label">THREAT MONITOR</div>
+    <div class="threat-row"><span class="threat-dot"></span><span id="threatText">Movement detected in the canopy</span></div>
+    <div class="section-label controls-label">FIELD CONTROLS</div>
+    <div class="controls"><span><kbd>WASD</kbd> MOVE</span><span><kbd>ARROWS</kbd> MOVE</span><span><kbd>SHIFT</kbd> SPRINT</span><span><kbd>SPACE</kbd> JUMP</span><span><kbd>E</kbd> INTERACT</span><span><kbd>CLICK</kbd> ATTACK</span><span><kbd>Q</kbd> ABILITY</span><span><kbd>H</kbd> HEAL</span><span><kbd>1–5</kbd> AVATAR</span></div>
+  </aside>
+  <div id="crosshair">+</div>
+  <div id="toast"></div>
+  <div id="bossBar" class="boss-bar"><div class="boss-caption">THE HOLLOW COLOSSUS <span id="bossPct">100%</span></div><div class="boss-track"><div id="bossFill"></div></div></div>
+  <div id="bottomHud"><span id="healthText">VITALS 100%</span><div class="health-track"><div id="healthFill"></div></div><span id="staminaText">STAMINA 100%</span><div class="stamina-track"><div id="staminaFill"></div></div><span id="netHint">CO-OP: CONNECT A SECOND CLIENT</span></div>
+  <div id="ending" class="panel ending"><p class="eyebrow">MISSION COMPLETE · SIGNAL RESTORED</p><h2>THE WORLD<br><em>BREATHES AGAIN.</em></h2><p>The relic stabilizes. The Curator's final transmission cuts to static—but a fifth signal remains active beneath the mountain.</p><button id="again">REPLAY EXPEDITION</button></div>
+  <script type="module" src="/src/main.js"></script>
+</body>
+</html>
